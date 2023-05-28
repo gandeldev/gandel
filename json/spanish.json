@@ -1,0 +1,28 @@
+{
+    "header": {
+        "Home": "Inicio",
+        "AboutMe": "Sobre mí",
+        "Skills": "Habilidades",
+        "ContactMe": "Contáctame",
+        "projects": "PROYECTOS"
+    },
+    "main": {
+        "iam": "Soy"
+    },
+    "about-me": {
+        "Description": "Soy un estudiante de ingeniería de software dedicado y apasionado, enfocado en ampliar mis conocimientos y habilidades en el campo de la tecnología. Mi principal enfoque está en el desarrollo web y de aplicaciones, con una sólida experiencia en el área de Front-end. Tengo un sólido entendimiento de los lenguajes y tecnologías utilizadas en esta área, como HTML, CSS y JavaScript, y me mantengo constantemente actualizado con las últimas tendencias y frameworks. Además, tengo habilidades y experiencia en el manejo de aspectos de back-end y bases de datos, lo cual me permite tener una visión completa del desarrollo de software. Mi objetivo es contribuir al desarrollo de soluciones tecnológicas innovadoras y eficientes, utilizando mis habilidades tanto en el front-end como en el back-end."
+    },
+    "btn-cv": {
+        "cv": "CURRICULUM"
+    },
+    "btn-store": {
+        "tmp-store": "TIENDA DE PLANTILLAS"
+    },
+    "contactme": {
+        "contact-me": "CONTACTAME",
+        "fullname": "NOMBRE",
+        "email": "CORREO ELECTRONICO",
+        "message": "MENSAJE",
+        "submit": "ENVIAR"
+    }
+}

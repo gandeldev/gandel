@@ -1,0 +1,28 @@
+{
+    "header": {
+        "Home": "Home",
+        "AboutMe": "About me",
+        "Skills": "Skills",
+        "ContactMe": "Contact me",
+        "projects": "PROJECTS"
+    },
+    "main": {
+        "iam": "I am"
+    },
+    "about-me": {
+        "Description": "I am a dedicated and passionate software engineering student, focused on expanding my knowledge and skills in the technology field. My main focus is on web and application development, with a strong proficiency in the Front-end area. I have a solid understanding of the languages and technologies used in this area, such as HTML, CSS, and JavaScript, and I am constantly updating myself with the latest trends and frameworks. In addition, I have skills and experience in handling back-end and database aspects, which allows me to have a complete vision of software development. My goal is to contribute to the development of innovative and efficient technological solutions, using my skills in both front-end and back-end."
+    },
+    "btn-cv": {
+        "cv": "CURRICULUM"
+    },
+    "btn-store": {
+        "tmp-store": "TEMPLATES STORE"
+    },
+    "contactme": {
+        "contact-me": "CONTACT ME",
+        "fullname": "FULL NAME",
+        "email": "E-MAIL",
+        "message": "MESSAGE",
+        "submit": "SUBMIT"
+    }
+}

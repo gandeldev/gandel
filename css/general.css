@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;800&display=swap');
+
+*, ::after, ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Montserrat', sans-serif;
+}
+
+*::selection {
+    background-color: #8338EC;
+    color: #fff;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 100%;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #8338EC;
+    border-radius: 20px;
+}
+
+body {
+    background-color: #010113;
+}
+
+body.fix,
+body.load {
+    overflow: hidden;
+}
+
+.go-back {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #010113;
+    border-radius: 50%;
+    color: #fff;
+    border: 2px solid #fff;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 30px;
+    transition: all 0.5s;
+    z-index: 10000;
+}
+
+.go-back.active {
+    display: block;
+}
+
+.go-back:hover {
+    background-color: #8338EC;
+}
+
+.load-section {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    background-color: #010113;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100001;
+}
+
+.load-section.active {
+    display: block;
+}
+
+@keyframes loadAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(90deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    75% {
+        transform: rotate(270deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.load-box {
+    width: 80px;
+    height: 80px;
+    border: 2px solid #8338EC;
+    border-top: none;
+    border-right: none;
+    border-radius: 50%;
+    animation: loadAnimation 0.5s infinite;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

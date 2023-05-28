@@ -1,0 +1,236 @@
+header {
+    background-color: #010113;
+    border-bottom: 2px solid #8338EC;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    transition: all 0.5s;
+}
+
+@keyframes show-header {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 80px;
+    }
+}
+
+header.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    animation: show-header 0.3s ease;
+}
+
+@keyframes text-shadow-animation {
+    0% {
+        text-shadow: none;
+    }
+
+    25% {
+        text-shadow: 4px 4px 0 #8338EC;
+    }
+
+    50% {
+        text-shadow: none;
+    }
+
+    75% {
+        text-shadow: -4px -4px 0 #8338EC;
+    }
+
+    100% {
+        text-shadow: none;
+    }
+}
+
+.name-dev {
+    color: #fff;
+    font-size: 40px;
+    animation: text-shadow-animation 2s infinite;
+}
+
+.button-menu {
+    display: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: #010113;
+}
+
+.lines-menu {
+    display: block;
+    background-color: #8338EC;
+    width: 100%;
+    height: 3px;
+    margin: 10px auto;
+}
+
+nav {
+    width: 600px;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.options-menu {
+    color: #421D80;
+    text-decoration: none;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.options-menu::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #8338EC;
+    transition: all 0.5s;
+}
+
+.options-menu:hover {
+    color: #8338EC;
+    font-size: 20px;
+}
+
+.options-menu:hover.options-menu::after {
+    width: 100%;
+    display: block;
+    height: 2px;
+}
+
+.my-projects {
+    background-color: transparent;
+    border: 2px solid #8338EC;
+    color: #8338EC;
+    text-decoration: none;
+    font-size: 20px;
+    width: 200px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    transition: all 0.5s;
+    overflow: hidden;
+}
+
+.my-projects::before {
+    display: block;
+    content: 'PROJECTS';
+    background-color: #8338EC;
+    width: 100%;
+    height: 0;
+    margin: auto;
+    text-align: center;
+    overflow: hidden;
+    color: #fff;
+    transition: all 0.5s;
+}
+
+.my-projects:hover {
+    color: #fff;
+}
+
+.my-projects:hover.my-projects::before {
+    width: 100%;
+    height: 100%;
+    animation: animation-projects 1s ease;
+}
+
+.project-btn-english::before {
+    content: 'PROJECTS';
+}
+
+.project-btn-spanish::before {
+    content: 'PROYECTOS';
+}
+
+.project-btn-russian::before {
+    content: 'ПРОЕКТЫ';
+}
+
+.project-btn-chinese::before {
+    content: '项目';
+}
+
+.project-btn-portuguese::before {
+    content: 'PROJETOS';
+}
+
+@media (max-width: 990px) {
+    header {
+        width: 100%;
+        height: 80px;
+        line-height: 80px;
+        display: grid;
+        grid-template-columns: 20% 80%;
+        grid-template-areas: 
+        "btn name"
+        ;
+        padding: 0 20px;
+    }
+
+    .button-menu {
+        grid-area: btn;
+        display: block;
+        margin: auto;
+    }
+
+    .name-dev {
+        grid-area: name;
+        margin: auto;
+    }
+
+    @keyframes showMenu {
+        from {
+            width: 0;
+        }
+        to {
+            width: 100%;
+        }
+    }
+
+    nav {
+        width: 100%;
+        background-color: #010113;
+        height: calc(100vh - 160px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        z-index: 1000;
+        position: fixed;
+        right: 100%;
+        top: 80px;
+        transition: all 0.5s;
+    }
+
+    nav.active {
+        right: 0;
+    }
+
+    .my-projects {
+        position: fixed;
+        right: 100%;
+        top: calc(100vh - 80px);
+        width: 100%;
+        height: 80px;
+        line-height: 80px;
+        background-color: #010113;
+    }
+
+    .my-projects.active {
+        right: 0;
+    }
+}
