@@ -187,6 +187,87 @@ progress::-webkit-progress-value {
     background-color: #8338EC;
 }
 
+/*PROJECTS SECTION*/
+
+.projects-section {
+    width: 100%;
+    height: auto;
+    margin: 200px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-container {
+    background-color: #fff;
+    width: 400px;
+    height: 300px;
+    display: grid;
+    grid-template-rows: 80% 20%;
+    grid-template-areas: 
+    "cover-project"
+    "title-project"
+    ;
+    transition: all 0.5s;
+}
+
+@keyframes shake {
+    0% {
+        box-shadow: none;
+    }
+
+    25% {
+        box-shadow: 20px 20px 0 #8338EC;
+    }
+
+    50% {
+        box-shadow: none;
+    }
+
+    75% {
+        box-shadow: -20px -20px 0 #8338EC;
+    }
+
+    100% {
+        box-shadow: none;
+    }
+}
+
+.project-container:hover {
+    animation: shake 2s infinite;
+}
+
+.cover-project {
+    grid-area: cover-project;
+    width: 100%;
+    height: 100%;
+    background-image: url(/assets/projects/ubuntu22ui.png);
+    background-size: 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 1s;
+}
+
+.project-container:hover .cover-project {
+    background-size: 130%;
+}
+
+.title-project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #8338EC;
+    font-size: 20px;
+    transition: all 0.5s;
+}
+
+.title-project:hover {
+    font-weight:bolder;
+}
+
 /*TEMPLATE STORE and CURRICULUM SECTION*/
 
 .store-templates,
